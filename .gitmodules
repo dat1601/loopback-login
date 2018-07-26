@@ -1,6 +1,6 @@
 [submodule "loopback-example-passport"]
 	path = loopback-example-passport
-	url = https://github.com/hamk-automation/loopback-login.git
+	url = https://github.com/hamk-automation/loopback-example-passport.git
 [submodule "loopback-login"]
 	path = loopback-login
 	url = https://github.com/hamk-automation/loopback-login.git

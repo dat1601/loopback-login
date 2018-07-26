@@ -1,0 +1,10 @@
+node_modules
+
+Dockerfile
+.dockerignore
+
+.gitignore
+README.md
+
+coverage
+build

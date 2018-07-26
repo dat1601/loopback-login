@@ -1,0 +1,22 @@
+{
+  "ldap": {
+    "provider": "ldap",
+    "authScheme":"ldap",
+    "module": "passport-ldapauth",
+    "authPath": "/auth/ldap",
+    "successRedirect": "/api/users",
+    "failureRedirect": "/failure",
+    "session": false,
+    "ldap_attribute_for_login":"uid",
+    "ldap_attribute_for_username":"uid",
+    "ldap_attribute_for_mail":"mail",
+    "json":true,
+    "server":{
+      "url": "ldap://localhost:389",
+      "bindDn":"cn=admin,dc=company,dc=com",
+      "bindCredentials":"123456",
+      "searchBase": "ou=Users,dc=company,dc=com",
+      "searchFilter": "(uid={{username}})"
+    }
+  }
+}
