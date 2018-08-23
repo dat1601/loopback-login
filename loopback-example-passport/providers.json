@@ -1,22 +1,22 @@
 {
-  "ldap": {
-    "provider": "ldap",
-    "authScheme":"ldap",
-    "module": "passport-ldapauth",
-    "authPath": "/auth/ldap",
-    "successRedirect": "/api/users",
-    "failureRedirect": "/failure",
-    "session": false,
-    "ldap_attribute_for_login":"uid",
-    "ldap_attribute_for_username":"uid",
-    "ldap_attribute_for_mail":"mail",
-    "json":true,
-    "server":{
-      "url": "ldap://localhost:389",
-      "bindDn":"cn=admin,dc=company,dc=com",
-      "bindCredentials":"123456",
-      "searchBase": "ou=Users,dc=company,dc=com",
-      "searchFilter": "(uid={{username}})"
+    "ldap": {
+        "provider": "ldap",
+        "authScheme": "ldap",
+        "module": "passport-ldapauth",
+        "authPath": "/auth/ldap",
+        "successRedirect": "/api/users",
+        "failureRedirect": "/failure",
+        "session": false,
+        "ldap_attribute_for_login": "userPrincipalName",
+        "ldap_attribute_for_username": "cn",
+        "ldap_attribute_for_mail": "userPrincipalName",
+        "json": true,
+        "server": {
+            "url": "ldaps://ldap.hamk.fi:636",
+            "bindDn": "cn=ldap_konttiserver,ou=service,ou=user accounts,dc=hamk,dc=ad,dc=local",
+            "bindCredentials": "jhfy475j",
+            "searchBase": "dc=hamk,dc=ad,dc=local",
+            "searchFilter": "(userPrincipalName={{username}})"
+        }
     }
-  }
 }
